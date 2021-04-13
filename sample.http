@@ -1,0 +1,23 @@
+GET http://localhost:3002/api/ HTTP/1.1
+
+###
+
+POST http://localhost:3006/api/verify HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    "serial": "120343"
+}
+
+###
+
+POST http://localhost:3006/api/payment HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    "amount": 120
+}
+
+###
